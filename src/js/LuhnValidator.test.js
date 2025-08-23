@@ -18,5 +18,3 @@ test('should work with dashes', () => {
 test('should return false for empty string', () => {
     expect(isValid('')).toBeFalsy();
 });
-
-s
