@@ -1,17 +1,22 @@
 import isValid from './LuhnValidator';
 
+const validCardNumber = '4242 4242 4242 4242';
+const invalidCardNumber = '4242 4242 4242 4243';
+
 test('should validate correct card number', () => {
-    expect(isValid('4561-2612-1234-1234')).toBeTruthy();
+    expect(isValid(validCardNumber)).toBeTruthy();
 });
 
 test('should invalidate incorrect card number', () => {
-    expect(isValid('4561-2612-1234-1235')).toBeFalsy();
+    expect(isValid(invalidCardNumber)).toBeFalsy();
 });
 
-test('should work with spaces', () => {
-    expect(isValid('4561 2612 1234 1234')).toBeTruthy();
+test('should work with dashes', () => {
+    expect(isValid('4242-4242-4242-4242')).toBeTruthy();
 });
 
 test('should return false for empty string', () => {
     expect(isValid('')).toBeFalsy();
 });
+
+s
