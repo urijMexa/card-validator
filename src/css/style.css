@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.widget-container {
+    width: 300px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.cards-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+    display: flex;
+}
+
+.card-logo {
+    height: 24px;
+    margin-right: 5px;
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+}
+
+.card-logo.active {
+    opacity: 1;
+}
+
+.card-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.card-input.valid {
+    border-color: green;
+}
+
+.card-input.invalid {
+    border-color: red;
+}
+
+.validate-button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
