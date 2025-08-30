@@ -57,3 +57,24 @@ body {
     border-radius: 4px;
     cursor: pointer;
 }
+.card-input.valid {
+    border: 2px solid green;
+}
+
+.card-input.invalid {
+    border: 2px solid red;
+}
+
+.message {
+    margin-top: 10px;
+    font-weight: bold;
+    height: 1.2em;
+}
+
+.message.valid {
+    color: green;
+}
+
+.message.invalid {
+    color: red;
+}

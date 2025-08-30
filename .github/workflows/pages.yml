@@ -25,6 +25,10 @@ jobs:
       - name: Install dependencies 📦
         run: yarn install
 
+      - name: Lint code 🧐
+
+        run: yarn lint
+
       - name: Test 🧪
         run: yarn test
 

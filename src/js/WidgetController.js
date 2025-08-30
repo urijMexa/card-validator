@@ -7,6 +7,7 @@ export default class WidgetController {
         this.input = document.querySelector('.card-input');
         this.button = document.querySelector('.validate-button');
         this.logos = document.querySelectorAll('.card-logo');
+        this.message = document.getElementById('validation-message');
 
         this.onInput = this.onInput.bind(this);
         this.onClick = this.onClick.bind(this);
@@ -18,7 +19,11 @@ export default class WidgetController {
     }
 
     onInput() {
+        // Очищаем стили и сообщение при вводе
         this.input.classList.remove('valid', 'invalid');
+        this.message.textContent = '';
+        this.message.className = 'message';
+
         const system = getPaymentSystem(this.input.value);
 
         this.logos.forEach((logo) => {
@@ -40,9 +45,13 @@ export default class WidgetController {
         if (isValid(cardNumber)) {
             this.input.classList.remove('invalid');
             this.input.classList.add('valid');
+            this.message.textContent = 'Card number is valid!';
+            this.message.className = 'message valid';
         } else {
             this.input.classList.remove('valid');
             this.input.classList.add('invalid');
+            this.message.textContent = 'Card number is invalid!';
+            this.message.className = 'message invalid';
         }
     }
 }

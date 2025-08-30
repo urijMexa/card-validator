@@ -1,4 +1,7 @@
+All payment system icons were sourced from a public repository on GitHub and are used for educational purposes only.
 
+Source Repository: https://github.com/aaronfagan/svg-credit-card-payment-icons
+License: MIT License
 
 - Visa Icon by ...
 - Mastercard Icon by ...
