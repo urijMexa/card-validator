@@ -9,7 +9,3 @@ build: off
 
 test_script:
   - yarn test
-
-
-
-
